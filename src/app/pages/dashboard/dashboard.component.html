@@ -1,0 +1,36 @@
+<div class="dashboard">
+    <h1>Bem-vindo(a) {{userInfo.name}}</h1>
+  
+    <form [formGroup]="updateForm" novalidate>
+        <div class="user-data">
+            <label class="user-label">Name</label>
+
+            <input [(ngModel)]="name" formControlName="name" type="text"
+                class="form-control" value={{userInfo.name}}
+                placeholder="Name" [ngModel]="userInfo.name">
+            
+            <button (click)="updateName()" type="submit">Salvar</button>
+        </div>
+        
+        <div class="user-data">
+            <label class="user-label">Email</label>
+
+            <input [(ngModel)]="email" formControlName="email" type="text"
+                class="form-control"value={{userInfo.email}}
+                placeholder="Email" [ngModel]="userInfo.email">
+            
+            <button (click)="updateEmail()" type="submit">Salvar</button>
+        </div>
+
+        <div class="user-data">
+            <label class="user-label">Password</label>
+
+            <input [(ngModel)]="password" formControlName="password"
+                type="password" class="form-control" placeholder="Password"
+                [ngModel]="userInfo.password">
+            
+            <button (click)="updatePassword()" type="submit">Salvar</button>
+        </div>
+    </form>
+  
+</div>

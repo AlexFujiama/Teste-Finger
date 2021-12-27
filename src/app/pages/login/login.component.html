@@ -1,0 +1,11 @@
+<div class="page-login">
+    <form [formGroup]="loginForm" novalidate>
+      <h1>Login</h1>
+
+      <input [(ngModel)]="email" formControlName="email" type="text" name="email" placeholder="Email">
+  
+      <input [(ngModel)]="password" formControlName="password" type="password" name="password" placeholder="Password">
+  
+      <button (click)="login()" type="submit">Login</button>
+    </form>
+  </div>

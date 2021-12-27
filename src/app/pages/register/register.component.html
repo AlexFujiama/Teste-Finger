@@ -1,0 +1,13 @@
+<div class="page-register">
+    <form [formGroup]="registerForm" novalidate>
+      <h1>Register</h1>
+  
+      <input [(ngModel)]="name" formControlName="name" type="text" name="name" placeholder="Name">
+
+      <input [(ngModel)]="email" formControlName="email" type="text" name="email" placeholder="Email">
+  
+      <input [(ngModel)]="password" formControlName="password" type="password" name="password" placeholder="Password">
+  
+      <button (click)="register()" type="submit">Register</button>
+    </form>
+  </div>
